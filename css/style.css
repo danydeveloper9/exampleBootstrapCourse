@@ -1,0 +1,468 @@
+/*-----------------------
+  PATRONES DE COLORES  
+-----------------------*/
+/*-----------------------
+    1. TIPOGRAFIAS
+-----------------------*/
+html {
+  font-size: 13px; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #696969; }
+
+/*----------------------------------------
+    2. ESTILOS GENERALES DE BOTONES
+----------------------------------------*/
+.btn {
+  border-radius: 2rem;
+  padding: 0.6rem 2rem;
+  font-weight: bold; }
+
+/*----------------------------------------
+    3. ESTILOS COLOR PRINCIPAL
+----------------------------------------*/
+.bg-secondary {
+  background-color: #35363c !important; }
+
+.text-secondary {
+  color: #35363c !important; }
+
+/*Estilos .btn-primary*/
+.btn-primary {
+  color: #fff;
+  background-color: #00ad75;
+  border-color: #00ad75;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.btn-primary:hover {
+  color: #35363c;
+  background-color: #fff;
+  border-color: #00ad75; }
+
+.btn-primary:active {
+  color: #35363c !important;
+  background-color: #00c786 !important;
+  border-color: #00d691 !important; }
+
+.btn-primary:focus {
+  color: #35363c !important;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 173, 117, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(0, 173, 117, 0.5) !important; }
+
+/*Insertamos la flecha del boton principal*/
+.btn-primary::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f138";
+  position: relative;
+  left: 0.6rem;
+  top: 0.1rem;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease; }
+
+.btn-primary:hover::after,
+.btn-primary:focus::after,
+.btn-primary:active::after {
+  left: 0.3rem; }
+
+/*Insertamos la caja blanca del boton principal*/
+.btn-primary::before {
+  content: "";
+  z-index: -1;
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  -webkit-transform: skewX(45deg);
+          transform: skewX(45deg);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+
+.btn-primary:hover::before,
+.btn-primary:focus::before,
+.btn-primary:active::before {
+  width: 110%;
+  left: -5%; }
+
+/*----------------------------------------
+    4. ESTILOS COLOR SECUNDARIO
+----------------------------------------*/
+.bg-primary {
+  background-color: #00ad75 !important; }
+
+.text-primary {
+  color: #00ad75 !important; }
+
+/*----------------------------------------
+    4. ESTILOS PARA ".redes-sociales"
+----------------------------------------*/
+.redes-sociales li a i {
+  color: white;
+  font-size: 1.5rem;
+  padding: .8rem .6rem;
+  opacity: .8;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+
+.redes-sociales li a i:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.4) rotate(360deg);
+          transform: scale(1.4) rotate(360deg); }
+
+/*----------------------------------------
+    5. ESTILOS PARA "#menu-navegacion"
+----------------------------------------*/
+/*Quitamos estilos al boton por defecto*/
+#menu-navegacion .container button {
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  outline: 0; }
+
+/*Estilos boton del menu personalizado*/
+#menu-navegacion .boton-menu::before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f0c9";
+  font-weight: 900;
+  font-size: 2rem;
+  color: #fff; }
+
+#menu-navegacion .icono-cerrar::before {
+  content: "\f00d";
+  position: relative;
+  left: 0.2rem; }
+
+/*Estilos de los enlaces del #menu-navegacion*/
+.navbar-dark .navbar-nav .nav-link {
+  padding: 1rem 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 0.5rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+.navbar-dark .navbar-nav .nav-link:after {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f105";
+  font-weight: 900;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  background-color: #4d4e57; }
+
+.navbar-dark .navbar-nav .nav-link:hover:after {
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg); }
+
+.navbar-dark .navbar-nav .nav-link.active {
+  background-color: #00ad75; }
+
+/* Estilos estado fijo */
+.menu-fijo {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: #1d1e21 !important;
+  width: 100% !important; }
+
+/*----------------------------------------
+    6. ESTILOS PARA "#animacion"
+----------------------------------------*/
+.swiper-slide {
+  height: 34rem;
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-position: center center; }
+
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  background: black;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4; }
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: #fff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-family: 'Font Awesome 5 Free';
+  font-size: 1rem;
+  font-weight: 900;
+  content: "\f060"; }
+
+.swiper-button-next {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #00ad75; }
+
+/*Botones de Paginacion*/
+.swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.4rem !important; }
+
+.swiper-pagination-bullet-active {
+  background-color: #00ad75; }
+
+/*----------------------------------------
+    7. ESTILOS PARA "#bienvenidos"
+----------------------------------------*/
+.video-contenedor a {
+  width: 7rem;
+  height: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  color: #00ad75;
+  text-decoration: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-clip: padding-box;
+  border: 0px solid transparent;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.video-contenedor a:hover {
+  background-color: #00ad75;
+  color: #fff;
+  border: 10px solid rgba(255, 255, 255, 0.5); }
+
+.video-contenedor img {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.video-contenedor:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2); }
+
+/*----------------------------------------
+    8. ESTILOS PARA "#te-ayudamos"
+----------------------------------------*/
+#te-ayudamos {
+  position: relative;
+  -webkit-transform: skew(0, 6deg);
+          transform: skew(0, 6deg); }
+
+#te-ayudamos::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+
+#te-ayudamos .container {
+  -webkit-transform: skew(0, -6deg);
+          transform: skew(0, -6deg); }
+
+/*----------------------------------------
+    9. ESTILOS PARA "#premios"
+----------------------------------------*/
+.contador-linea {
+  background-color: #00ad75;
+  width: 4rem;
+  height: 0.35rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+#premios .col-6:hover .contador-linea {
+  bottom: 1rem;
+  -webkit-transform: rotate(180deg) translateX(50%);
+          transform: rotate(180deg) translateX(50%);
+  background-color: #35363c; }
+
+/*----------------------------------------
+    10. ESTILOS PARA "#nuestra-app"
+----------------------------------------*/
+#nuestra-app::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0; }
+
+/*----------------------------------------
+    10. ESTILOS PARA "#contacto"
+----------------------------------------*/
+#contacto header::after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  background-color: #00ad75;
+  -webkit-transform: translateX(-50%) translateY(50%) rotate(45deg);
+          transform: translateX(-50%) translateY(50%) rotate(45deg);
+  bottom: 0; }
+
+.form-control-cita {
+  margin-bottom: 0;
+  cursor: pointer; }
+
+/*Estilos DATE*/
+.picker__box {
+  border: 0s 0.6rem solid #00ad75; }
+
+.picker--focused .picker__day--selected,
+.picker__day--selected,
+.picker__day--selected:hover {
+  background: #00ad75;
+  color: #fff; }
+
+.picker__day--highlighted {
+  border-color: #007a53; }
+
+.picker__select--month,
+.picker__select--year {
+  padding: 0 0.5rem;
+  border-radius: 0.5rem; }
+
+.picker__select--month:focus,
+.picker__select--year:focus {
+  border-color: #00ad75; }
+
+.picker__day--today::before {
+  border-top: 0.5em solid #007a53;
+  border-left: .5em solid transparent; }
+
+.picker__button--today::before {
+  border-top: 0.66em solid #007a53; }
+
+.picker__button--close::before {
+  color: #e11717; }
+
+.picker__button--clear::before {
+  border-top: 3px solid #330deae6; }
+
+/*Estilos time*/
+.picker__list {
+  padding: .75em 0em; }
+
+.picker--focused .picker__list-item--highlighted,
+.picker__list-item--highlighted:hover,
+.picker__list-item:hover {
+  background: #00c786;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease; }
+
+.picker__list-item--highlighted,
+.picker__list-item:hover {
+  border-color: #004730; }
+
+.picker--time .picker__button--clear:focus,
+.picker--time .picker__button--clear:hover {
+  background: #e11717;
+  border-color: #810b0b;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+/*----------------------------------------
+    11. ESTILOS PARA "#pie-de-pagina"
+----------------------------------------*/
+.columna-inclinada::before {
+  content: "";
+  position: absolute;
+  background-color: #00ad75;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: -100%; }
+
+.enlace-secundario {
+  border-bottom: 1px solid #515962;
+  -webkit-box-shadow: 0 1px #181b1e;
+          box-shadow: 0 1px #181b1e; }
+
+.enlace-secundario a {
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  display: block; }
+
+/*Estilos para IE11*/
+.ie11 #bienvenidos .contenedor-video img {
+  width: 100%; }
+
+.ie11 .navbar-dark .navbar-nav .nav-link::after {
+  display: block; }
+
+/*----------------------------------------
+    X. Media Queries
+----------------------------------------*/
+@media (min-width: 768px) {
+  .navbar-dark .navbar-nav .nav-link {
+    padding: 0.7rem 1.2rem;
+    border-radius: 1.5rem; }
+
+  .navbar-dark .navbar-nav .nav-link:after {
+    content: ""; }
+
+  #te-ayudamos {
+    -webkit-transform: skew(0deg, 2deg);
+            transform: skew(0deg, 2deg); }
+
+  #te-ayudamos .container {
+    -webkit-transform: skew(0deg, -2deg);
+            transform: skew(0deg, -2deg); }
+
+  .columna-inclinada::before {
+    left: -300%;
+    right: 0;
+    -webkit-transform: skewX(20deg);
+            transform: skewX(20deg); } }
+@media (min-width: 900px) {
+  html {
+    font-size: 16px; }
+
+  .swiper-slide {
+    height: 37.5rem;
+    /*600px*/ } }
+@media (min-width: 1200px) {
+  .swiper-slide {
+    height: 44rem;
+    /*700px*/ } }
+/*# sourceMappingURL=style.css.map */
